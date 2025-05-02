@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Pinar-light";
+    font-weight: 100 900;
+    src: url("/public/fonts/Pinar-Light.ttf");
+}
+@font-face {
+    font-family: "Pinar-medium";
+    font-weight: 100 900;
+    src: url("/public/fonts/Pinar-Medium.ttf");
+}
+@font-face {
+    font-family: "Pinar-bold";
+    font-weight: 100 900;
+    src: url("/public/fonts/Pinar-Bold.ttf");
+}
+@font-face {
+    font-family: "Pinar-extra";
+    font-weight: 100 900;
+    src: url("/public/fonts/Pinar-Extra.ttf");
+}
+
+body{
+    font-family: 'Pinar';
+}
