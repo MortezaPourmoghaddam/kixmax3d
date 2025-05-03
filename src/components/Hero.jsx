@@ -1,11 +1,13 @@
 import React from "react";
 import SodaCanvas from "./3D/SodaCanvas";
+import { BackgroundEllipse, Ellipse1, Ellipse3, Ellipse4, Ellipse5, Ellipse6 } from "../../public/svg";
+import Ellipse from "./utils/Ellipse";
 
 const Hero = () => {
   return (
     <div className="flex w-[85%] m-auto">
       <div className="flex-1 flex flex-col justify-center items-center h-full">
-        <h1 className="text-white text-[88px] font-black font-['Potk']">
+        <h1 className="text-white text-[80px] font-black font-Potk text-nowrap">
           {"نوشیدنی کیکس مکس"}
         </h1>
         <div
@@ -23,6 +25,12 @@ const Hero = () => {
         </p>
       </div>
       <div className="flex-1">
+        <div className="flex w-full justify-center items-center relative">
+          <img className="w-[75%]" src={BackgroundEllipse} alt="" />
+          <div className="z-[99999]">
+           
+          </div>
+        </div>
         <SodaCanvas />
       </div>
     </div>

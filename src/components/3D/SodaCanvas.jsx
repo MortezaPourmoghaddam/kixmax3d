@@ -4,11 +4,15 @@ import { Environment, Float, OrbitControls } from "@react-three/drei";
 import gsap from "gsap";
 import { DirectionalLight } from "three";
 import { Model } from "./models/Model";
+import Floating from "./Floating";
+import HeroModel from "./HeroModel";
+import GradientSphere from "./models/GradientSphere";
 
 const SodaCanvas = () => {
   return (
     <Canvas
       style={{
+        background: "transparent",
         // pointerEvents: "none",
         position: "fixed",
         top: 0,
@@ -24,10 +28,10 @@ const SodaCanvas = () => {
       dpr={[1, 1.5]}
       gl={{ antialias: true }}
     >
-      <Model texture={"kix1"}/>
-      <Environment files="/hdrs/lobby.hdr" environmentIntensity={.8} />
+      <HeroModel />
+      <directionalLight position={[0, 2, 5]} intensity={1.2} castShadow receiveShadow />
+      <Environment files="/hdrs/lobby.hdr" background={false} environmentIntensity={.8} />
       {/* <OrbitControls /> */}
-      {/* <directionalLight position={[1, 1, 2]} intensity={10} /> */}
     </Canvas>
   );
 };
